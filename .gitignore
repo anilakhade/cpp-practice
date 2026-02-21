@@ -10,6 +10,7 @@
 # Compiled programs without extension (like prob_009)
 prob_*
 !*.cpp
+run
 
 # CMake (future-proofing)
 build/
