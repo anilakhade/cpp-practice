@@ -1,0 +1,25 @@
+# Binaries
+*.exe
+*.out
+*.o
+*.obj
+*.a
+*.so
+*.dll
+
+# Compiled programs without extension (like prob_009)
+prob_*
+!*.cpp
+
+# CMake (future-proofing)
+build/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# VS Code
+.vscode/
+
+# Windows junk
+Thumbs.db
