@@ -2,29 +2,27 @@
 
 #include <iostream>
 #include <vector>
-#include <algorithm>
 
-std::vector<int> RemoveDuplicates(std::vector<int>& arr) {
+std::vector<int> RemoveDuplicatesFromSortedArray(std::vector<int>& arr) {
     int n = arr.size();
-    std::vector<int> sort_arr(n);
-    //sort the array
-    sort(arr.begin(), arr.end());
-    
-    // Remove duplicates
-    for (int i = 0; i < n; ++i) {
-        if (arr[i] != arr[i - 1]) {
-            sort_arr[i] = arr[i];
+    int k = 1;
+    for (int i = 1; i < n; ++i) {
+        if (arr[i] != arr[k-1]){
+            arr[k] = arr[i];
+            k++;
         }
     }
-    return sort_arr;
+    arr.resize(k);
+    return arr;
 }
 
 int main() {
-    std::vector<int> arr = {5,3,4,1,4,2,8,8};
-    std::vector<int> new_arr = RemoveDuplicates(arr);
-    for (int x : new_arr) {
+    std::vector<int> arr = {0,0,1,1,2,3,4,4,5,6,6,8,8};
+
+    std::vector<int> r = RemoveDuplicatesFromSortedArray(arr);
+
+    for (int x : r) {
         std::cout << x << " ";
     }
     std::cout << std::endl;
-    return 0;
 }
