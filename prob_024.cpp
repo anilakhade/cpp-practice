@@ -15,8 +15,8 @@ int main() {
         freq[x]++;
     }
 
-    for (auto const& [element, count] : freq) {
-        std::cout << element << " appears " << count << " times " << std::endl;
+    for (auto const &p : freq) {
+        std::cout << p.first << " appears " << p.second << " times " << std::endl;
     }
 
     return 0;
