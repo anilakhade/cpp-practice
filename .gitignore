@@ -6,6 +6,7 @@
 *.a
 *.so
 *.dll
+*.txt
 
 # Compiled programs without extension (like prob_009)
 prob_*
