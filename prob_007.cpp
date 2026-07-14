@@ -1,4 +1,4 @@
-// find first occurence of the value(k)
+// find first Occurence of the value(k)
 
 #include <iostream>
 #include <vector>
